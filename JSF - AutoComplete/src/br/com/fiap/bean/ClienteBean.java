@@ -17,6 +17,10 @@ public class ClienteBean {
 		return new ClienteDAOImpl(EntityManagerFactorySingleton.getInstance().createEntityManager())
 				.buscarPorNomeCliente(nome);
 	}
+	
+	public void excluir(String codigo) {
+		
+	}
 
 	public String getNomeBusca() {
 		return nomeBusca;

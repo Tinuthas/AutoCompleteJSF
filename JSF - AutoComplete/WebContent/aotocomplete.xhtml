@@ -10,5 +10,17 @@
 <body>
 	<p:autoComplete id="nome" value="#{clienteBean.nomeBusca}"
 		completeMethod="#{clienteBean.completaNomeCliente}" />
+
+	<p:commandButton icon="ui-icon-close"
+		action="#{clienteBean.excluir(cliente.codigo)}">
+		<p:confirm header="Confirmação" message="Deseja realmente excluir?" />
+	</p:commandButton>
+
+	<p:confirmDialog global="true" showEffect="fade">
+		<p:commandButton value="Sim" type="button"
+			styleClass="ui-confirmdialog-yes" />
+		<p:commandButton value="Não" type="button"
+			styleClass="ui-confirmdialog-no" />
+	</p:confirmDialog>
 </body>
 </html>
